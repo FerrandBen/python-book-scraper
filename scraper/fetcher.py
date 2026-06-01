@@ -13,7 +13,7 @@ def fetch_page(url):
         print("La requête a dépassé le délai (timeout).")
         return None
     except HTTPError as e:
-        print(f"Erreur HTTP: {e.response.status_code}")
+        print(f"Erreur HTTP: {e}")
         return None
     except RequestException as e:
         print(f"Erreur réseau: {e}")
