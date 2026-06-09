@@ -6,4 +6,4 @@ class Book:
     title: str
     price: float
     score: int
-    availability : bool
+    availability: bool
