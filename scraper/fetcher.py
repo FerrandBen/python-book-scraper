@@ -7,6 +7,7 @@ def fetch_page(url):
     try:
         response = requests.get(url, timeout=5)
         response.raise_for_status()
+        response.encoding = "utf-8"
         data = response.text
         return data
     except Timeout:

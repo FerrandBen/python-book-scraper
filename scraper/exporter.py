@@ -17,7 +17,7 @@ def export_json(books):
 def export_csv(books):
 
     with open(CFILE_PATH, "w", newline="") as csvfile:
-        fieldnames = ["title", "price", "score", "avaibility"]
+        fieldnames = ["title", "price", "score", "availability"]
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows([dataclasses.asdict(book) for book in books])
